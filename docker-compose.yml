@@ -9,10 +9,5 @@ services:
     volumes:
       - ./src:/app
     command: python main.py
-    networks:
-      - my_job
-      - default
-
-networks:
-  my_job:
-    external: true
+    ports:
+      - "5000:5000"
